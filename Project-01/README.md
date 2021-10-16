@@ -27,7 +27,7 @@ and that would help us with classifying the language a tweet is written in.
 
 We tried these features however, they did not increase our test accuracy in the end and therefore we removed them again.  
 
-We found that the low accuracy is mainly caused by the imbalanced class problem. In order to compensate for class imbalance,
+We found that the imbalanced class problem is badly influencing the accuracy . In order to compensate for class imbalance,
 we used back translation of underrepresented languages and upsamling to augment those data.  
 The dataset is split into train and test dataset using a 90:10 split.  
 TfidfVectorizer was used in order to tokenize the Tweets.  
