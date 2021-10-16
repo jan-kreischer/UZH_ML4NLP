@@ -88,14 +88,14 @@ The following hyperparamters combinations were tried out
 - **MLPClassifier > activation**: tanh, relu
 
 The weighted average accuracies under different configurations are respectively as follows:
-- **hidden_layer_sizes>100,solver>adam,activatio>tanh**: 
-- **hidden_layer_sizes>100,solver>adam,activatio>relu**: 
-- **hidden_layer_sizes>100,solver>sgd,activatio>tanh**: 
-- **hidden_layer_sizes>100,solver>sgd,activatio>relu**: 
-- **hidden_layer_sizes>200,solver>adam,activatio>tanh**: 92%
-- **hidden_layer_sizes>200,solver>adam,activatio>relu**: 91%
-- **hidden_layer_sizes>200,solver>sgd,activatio>tanh**: 
-- **hidden_layer_sizes>200,solver>sgd,activatio>relu**: 
+- **hidden_layer_sizes > 100, solver > adam, activatio > tanh**: 
+- **hidden_layer_sizes > 100, solver > adam, activatio > relu**: 
+- **hidden_layer_sizes > 100, solver > sgd, activatio > tanh**: 
+- **hidden_layer_sizes > 100, solver > sgd, activatio > relu**: 
+- **hidden_layer_sizes > 200, solver > adam, activatio > tanh**: 92%
+- **hidden_layer_sizes > 200, solver > adam, activatio > relu**: 91%
+- **hidden_layer_sizes > 200, solver > sgd, activatio > tanh**: 
+- **hidden_layer_sizes > 200, solver > sgd, activatio > relu**: 
 
 In the end, running these 12 hyperparameter combinations also took over 30 hours. Although we didn't manage to get the accuracy from the configurations with hidden_layer_size=500, because of the colab crash problems after long hours of trainning, we found that with 100 and 200 hidden_layer_sizes, we can already achieve quite well trainning outcome. While the model performed quite well when the Adam optimizer was used, it performed much worse when it was trained by SGD.  
 The best model that got trained with Adam received an accuracy of 92% and micro f1 of 92% and macro f1 of 89%.  
