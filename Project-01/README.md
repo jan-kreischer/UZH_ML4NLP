@@ -27,10 +27,10 @@ and that would help us with classifying the language a tweet is written in.
 
 We tried these features however, they did not increase our test accuracy in the end and therefore we removed them again.  
 
-We found that the imbalanced class problem is badly influencing the accuracy . In order to compensate for class imbalance,
+We found that the imbalanced class problem is badly influencing the accuracy result. In order to compensate for class imbalance,
 we used back translation of underrepresented languages and upsamling to augment those data.  
 The dataset is split into train and test dataset using a 90:10 split.  
-TfidfVectorizer was used in order to tokenize the Tweets.  
+TfidfVectorizer was used in order to tokenize the Tweets. The reason why we chose the tf-idf vectorizer instead of the Count Vectorizer is that tf-idf vectorizer produces a more normalized representation of word. Compared to Count Vectorizer, the tf-itf way gives more weights to the rare word or the unique prefix or suffix.
 GridSearchCV (5-fold cross validation) is used in order to find the best combination of hyperparameters for the tokenizer and the model.  
 The following parameters were passed to GridSearchCV.  
 We did not pass word as a possible analyzer to the TfidfTokenizer since  
@@ -79,7 +79,7 @@ We did not do the data cleaning and preprocessing again.
 We just load the augmented dataset that we saved (dataset.csv) during the first part of the exercise.  
 We then tried to train a MLPClassifier using GridSearchCV, however after running for 10 hours our runntime disconnected  
 and we could not retrieve any results from that.
-Therefore, we decided to run 8 different hyperparamter combinations individually and compare the classification reports  
+Therefore, we decided to run 12 different hyperparamter combinations individually and compare the classification reports  
 with each other.
 The following hyperparamters combinations were tried out
 
@@ -88,16 +88,15 @@ The following hyperparamters combinations were tried out
 - **MLPClassifier > activation**: tanh, relu
 
 The weighted average accuracies under different configurations are respectively as follows:
-- **hidden_layer_sizes > 100, solver > adam, activatio > tanh**: 
-- **hidden_layer_sizes > 100, solver > adam, activatio > relu**: 
-- **hidden_layer_sizes > 100, solver > sgd, activatio > tanh**: 
-- **hidden_layer_sizes > 100, solver > sgd, activatio > relu**: 
-- **hidden_layer_sizes > 200, solver > adam, activatio > tanh**: 92%
-- **hidden_layer_sizes > 200, solver > adam, activatio > relu**: 91%
-- **hidden_layer_sizes > 200, solver > sgd, activatio > tanh**: 
-- **hidden_layer_sizes > 200, solver > sgd, activatio > relu**: 
+- **hidden_layer_sizes > 100, solver > adam, activatio > tanh**:  92%
+- **hidden_layer_sizes > 100, solver > adam, activatio > relu**:  92%
+- **hidden_layer_sizes > 100, solver > sgd, activatio > tanh**:  72%
+- **hidden_layer_sizes > 100, solver > sgd, activatio > relu**:  timeout
+- **hidden_layer_sizes > 200, solver > adam, activatio > tanh**:  92%
+- **hidden_layer_sizes > 200, solver > adam, activatio > relu**:  91%
+- **hidden_layer_sizes > 200, solver > sgd, activatio > tanh**:  timeout
+- **hidden_layer_sizes > 200, solver > sgd, activatio > relu**:  timeout
+- **hidden_layer_sizes > 500,..**:  timeout
 
-In the end, running these 12 hyperparameter combinations also took over 30 hours. Although we didn't manage to get the accuracy from the configurations with hidden_layer_size=500, because of the colab crash problems after long hours of trainning, we found that with 100 and 200 hidden_layer_sizes, we can already achieve quite well trainning outcome. While the model performed quite well when the Adam optimizer was used, it performed much worse when it was trained by SGD.  
-The best model that got trained with Adam received an accuracy of 92% and micro f1 of 92% and macro f1 of 89%.  
-In contrast, The best model that got trained with SGD received an accuracy of 77% and micro f1 of 72% and macro f1 of 8%.  
-This is much worse in comparison.  
+In the end, running these 12 hyperparameter combinations also took over about 30 hours. Although we didn't manage to get the accuracy from the configurations with hidden_layer_size=500, because of the colab crash problems after long hours of trainning, we found that with 100 and 200 hidden_layer_sizes, we can already achieve quite well trainning outcome. While the model performed quite well when the Adam optimizer was used, it performed much worse when it was trained by SGD.  
+The best model that got trained with Adam received an accuracy of 92% and micro f1 of 92% and macro f1 of 89%.  In contrast, The best model that got trained with SGD received an accuracy of 77% and micro f1 of 72% and macro f1 of 8%.  This is much worse in comparison.  Also, between 100 and 200 hidden_layer_sizes, the results do not differ too much, both achieving similar level of 92% in accuracy.
