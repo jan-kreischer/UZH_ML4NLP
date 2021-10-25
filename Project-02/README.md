@@ -1,7 +1,25 @@
 Lab Report
 
 
-In this project, we are asked to creat our own word-embedding using the Continuous-Bag-of-Word(CBOW) model based on two corpuses(hotel reviews and a scifi story) and test our embedding. We have build a NLP pipline to achieve the task using linear classification (Part1), and Multilayer Perceptron (Part2). In a first step, the most important distributional properties of the dataset are described. The dataset contains a total of 65954 samples split into 52675 training samples and 13279 test samples. Every sample comprises a "tweet" column with the textual content and a "label" column with the associated language. The histogram shows that there are many labels with very low frequency (strong class imbalance). For example 50 labels occur less than 20 times in the whole dataset. However, English occurs more than 20,000 times. We are dealing with this class imbalance in a later step.
+In this project, we are asked to creat our own word-embedding using the Continuous-Bag-of-Word(CBOW) model based on two corpuses(hotel reviews and a scifi story) and test our embedding. We have build a CBOW2 model and make the hotel reviews dataset and the scifi text embeded in (Part1), and test the embedding (Part2). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Part 1
 We merged the given training and test data into one dataset, so we had to write less code for the pre-processing. At first we cleaned the data by removing emojis, twitter @ mentions, numeric patterns etc.. Since the tweet itself is the only featuretext corpus that we are given, we thought about possible features that we could engineer and that would help us with classifying the language a tweet is written in.
