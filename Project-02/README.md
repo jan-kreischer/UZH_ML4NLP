@@ -32,8 +32,12 @@ In Part 2, we are asked to find 3 nouns, 3 verbs and 3 adjectives from different
 
 |    frequency  |selected words|5 closest neighbours|
 |--------------|-----------------|--------------------|
-| high frequnt |        hotel      |   0           |
-||1|
-||2|
-||3|
-||4|
+|high frequnt|        hotel      | 'pita', 'fat', 'smoke', 'piccolo', 'stingers'|
+|high frequnt|great|'fantastic', 'denmark', 'wonderful', 'stationary', 'bike'|
+|high frequnt|clean|'seller', 'sio', 'waves', 'smelled', 'beautifully'|
+|medium frequent|issue|'musicians', 'replenishing', 'loews', 'palmer', 'teddy'|
+|medium frequent|adequate|'lush', 'condescending', 'discriminating', 'nice', 'naughty'|
+|medium frequent|smoking|'bagages', 'neil', 'gated', 'sailboats', 'rust'|
+|least frequent|italy|'flair', 'overbook', 'innova', 'inexistant', 'tightest'|
+|least frequent|filled|'formalities', 'rememberance', 'retreating', 'mags', 'ghiardelli'|
+|least frequent|comment|'memory', 'everynight', 'brings', 'neutrogena', 'domican'|
