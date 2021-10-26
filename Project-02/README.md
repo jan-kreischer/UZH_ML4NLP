@@ -1,23 +1,23 @@
 # Project 2 Report
-## *CBOW Word embedding with PyTorch* <br/><br/>
+## *CBOW Word embeddings with PyTorch* <br/><br/>
 
 
 In this project, we are asked to create our own word-embedding using the Continuous-Bag-of-Word(CBOW) model with two corpuses(hotel reviews and and a scifi story). We have build and trained a CBOW2 model based on the hotel reviews dataset and the scifi text.
 
 ## Part 1
 
-- **Preprocessing**
+### 1. Preprocessing
 
-- Hotel Reviews Dataset
+#### Hotel Reviews Dataset
 
 After loading the data into colab, we clean the data. For each review, we substitute all numbers with spaces, make all words lowercase and delete all punctuation marks. We also remove stopwords and words which appear infrequently (because they usually contain spelling errors). After cleaning we get a list of reviews. Next, we delete all reviews that have less than 5 words, because to build a CBOW2 model, we need to have 4 content words (2 to the left and 2 to the right) for each of target word. We also eliminate words that occurs only 1 time, since they are likely to be misspelled.
 
-- Scifi dataset
+#### Scifi Dataset
 
 For the scifi dataset, the processing is very much the same. Firstly, all numbers and all punctional marks. Then we get the word list and the unique vocabularies list to form the word2list dictionary to map the words to numbers. We then eliminate words that occurs less than 100 times. In this relatively large corpus, we consider words occuring less than 100 times as uncommon words. They very much influence the training outcome.
 
 
-- **Embedding**
+### 2. Learning the word embeddings
 
 Wtih the word list, we then built the vocabulary list with all unique words, with which we can later build the word2index and index2word dictionaries. These two dictionary will help us to map words two their index number for training the embedding.
 Next, for the hotel reviews dataset, for every review in the reviews list, we create context-target tuples. The tuple contains the target word itself and a list composed of its former 2 words and later 2 words. These tuples are later transformed into a tensor using the word2index lookup-table.
