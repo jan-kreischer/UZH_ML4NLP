@@ -46,9 +46,10 @@ In Part 2, we are asked to find 3 nouns, 3 verbs and 3 adjectives from with diff
 We can see that most of the neighbouring words given by the model make sense, while some do not. For very frequent adjectives, such as "great", the result('fantastic', 'excellent', 'superb', 'best', 'palmetto') very good. The first 4 are synonyms and the last one('palmetto') is like to be in a good hotel. While the result for the other less frequent words, such as "common" or other ambiguous word such as "clean", "filled" (they can both be a verb or an adjective) are less satisfactory. 
 
 -The 9 chosen words from the scifi text and their neighbours are as follows:
-|frequency|selected words|5 closest neighbours|
-|-|-|-|
-|very frequent|time|'said', 'first', 'thought', 'made', 'like'|
+frequency selected words  5 closest neighbours
+--------- --------------  --------------------
+very frequent time  'said', 'first', 'thought', 'made', 'like'
+
 |very frequent|think|'know', 'tell', 'enough', 'want', 'sure'|
 |very frequent|right|'said', 'man', 'made', 'course', 'little'|
 |medium frequent|blood|'single', 'small', 'back', 'little', 'light'|
