@@ -43,7 +43,6 @@ In Part 2, we are asked to find 3 nouns, 3 verbs and 3 adjectives from with diff
 |low frequent|filled|'stupid', 'hanson', 'fra', 'ankle', 'caren'|
 |low frequent|comment|'hotel', 'bedding', 'intensive', 'walls', 'definitely'|
 
-![image](https://user-images.githubusercontent.com/49683560/138957548-69573848-ea1d-46b3-a6b0-be5f787449bb.png)
 
 We can see that most of the neighbouring words given by the model make sense, while some do not. For very frequent adjectives, such as "great", the result('fantastic', 'excellent', 'superb', 'best', 'palmetto') very good. The first 4 are synonyms and the last one('palmetto') is like to be in a good hotel. While the result for the other less frequent words, such as "common" or other ambiguous word such as "clean", "filled" (they can both be a verb or an adjective) are less satisfactory. 
 
