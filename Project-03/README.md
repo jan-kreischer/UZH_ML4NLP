@@ -36,7 +36,7 @@ An easy trick in order to increase the macro F1 score, would be to drop all the 
 |5.|adam|0.001|0.25|128|1|5|GlobalMaxPooling1D|128|0.97|0.5|0.97|
 
 ## Part 2
-Take the best performing model and evaluate it on the test set. We decided to evaluate model number 5 on the test data since it showed the best validation accuracy. Model number 5 yielded us with an accuracy of 92% and  
+Take the best performing model and evaluate it on the test set. We decided to evaluate model number 5 on the test data since it showed the best validation accuracy. The best models performance and the used hyperparameters can be seen in the following table.
 
 |Model Nr.|Optimzer|Learning Rate|Dropout Rate|#Filters|Stride|Kernel Size|Pooling|Batch Size|Accuracy|Macro F1|Weighted F1|
 |-|-|-|-|-|-|-|-|-|-|-|-|
