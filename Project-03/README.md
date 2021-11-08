@@ -35,10 +35,6 @@ An easy trick in order to increase the macro F1 score, would be to drop all the 
 |4.|adam|0.001|0.5|128|1|5|GlobalMaxPooling1D|64|0.95|0.5|0.94|
 |5.|adam|0.001|0.25|128|1|5|GlobalMaxPooling1D|128|0.97|0.5|0.97|
 
-
-
-
-
 ## Part 2
 Take the best performing model and evaluate it on the test set. We decided to evaluate model number 5 on the test data since it showed the best validation accuracy. Model number 5 yielded us with an accuracy of 92% and  
 
@@ -48,14 +44,28 @@ Take the best performing model and evaluate it on the test set. We decided to ev
 
 ## Part 3
 **Reason about the observed effects of your 5 best hyperparameter settings on model performance.**
+1. Optimizer => we saw that adam generally performed better on our training data leading to better results.
+2. Learning rate => If the learning rate was to high (e.g 0.1, 0.01) we saw that the training process did not really converge.
+3. Dropout => Very big values for the dropout rate (e.g 0.8) lead to very poor results. The optimal dropout rate seems to be located in between 0.25 and 0.5.
+4. Number of filters => We were able to see that increasing the number of filter did not improve the performance at some point anymore. In our case this was around 128.
+5. Strides => A strid of one seems optimal, shifting the filter step by step over the input.
+6. Different kernel sizes => The optimal size for the kernel seems to be five, while 3 was to small and 7 was to big.
+7. Pooling strategies => We only used GlobalMaxPooling as the Pooling strategy.
+8. Batch sizes => Reasonable batch sizes, between 32, 64 and 128 all seemed to work reasonably well.
 
 ## Part 4
 **Compare the outputs of the best CNN model to your best performing model from Exercise 1. Which classifier scores higher on the test set? Do you have an idea, why this might be?**
+|Model|Accuracy|Macro F1|Weighted F1|
+|-|-|-|-|
+|SGDClassifier|0.93|0.93|0.93|
+|MultinomialNB|0.86|0.84|0.86|
+|ANN|0.92|0.89|0.92|
+|CNN|0.92|0.5|0.91|
 
+Multiple causes might be the reason while the models from assignment 01 perform better (especially the SGDClassifier) than the CNN we used now.
+First of all, we were allowed to optimize the hyperparameters on the training data for assignment 01.
+Furthermore, for assignment 03 we upsampled the underrepresented classes to a total occurence of 100.
+Therefore in the split we are using for training and testing more samples from a formerly underrepresented class occur.
+Since the model performs worse for samples from small classes, this reduces our macro f1 score.
+Overall the weighted average performance of the models is very comparable.
 
-Implement a language classifier in PyTorch or Keras-Tensorflow. We suggest reusing and adjusting the class structure from exercise 2 (which may be inspired by Rao and McMahan). However, you are free to create your own, new class structure. Keep in mind that for language classification we work on the character level. Thus, your Vocabulary class (that is, if you have one) will not hold a vocabulary of words, but a vocabulary of characters.
-
-We merged the given training and test data into one dataset, so we had to write less code for the pre-processing.
-At first we cleaned the data by removing emojis, twitter @ mentions, numeric patterns etc..
-Since the tweet itself is the only featuretext corpus that we are given, we thought about possible features that we could engineer
-and that would help us with classifying the language a tweet is written in.
