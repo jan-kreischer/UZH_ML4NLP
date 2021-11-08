@@ -47,11 +47,10 @@ Take the best performing model and evaluate it on the test set. We decided to ev
 |5.|adam|0.001|0.2|128|1|5|GlobalMaxPooling1D|128|0.92|0.5|0.91|
 
 ## Part 3
-Reason about the observed effects of your 5 best hyperparameter settings on model performance. You do not need to be sure that the reasons you provide are correct – the goal is to provide educated (or well-reasoned) guesses.
+**Reason about the observed effects of your 5 best hyperparameter settings on model performance.**
 
 ## Part 4
- Compare the outputs of the best CNN model to your best performing model from Exercise 1. Which classifier scores
- higher on the test set? Do you have an idea, why this might be?
+**Compare the outputs of the best CNN model to your best performing model from Exercise 1. Which classifier scores higher on the test set? Do you have an idea, why this might be?**
 
 
 Implement a language classifier in PyTorch or Keras-Tensorflow. We suggest reusing and adjusting the class structure from exercise 2 (which may be inspired by Rao and McMahan). However, you are free to create your own, new class structure. Keep in mind that for language classification we work on the character level. Thus, your Vocabulary class (that is, if you have one) will not hold a vocabulary of words, but a vocabulary of characters.
