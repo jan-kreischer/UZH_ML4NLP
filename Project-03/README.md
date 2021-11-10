@@ -5,13 +5,12 @@
 This project is about language identification using convolutional neural networks (CNNs).
 In a first step, the most important distributional properties of the dataset are inspected and plotted.
 The dataset contains a total of 65954 samples split into 52675 training samples and 13279 test samples.
-Every sample comprises a "tweet" column with the textual content and a "label" column with the associated language.
+Every sample comprises a "tweet" column of the textual content and a "label" column of the associated language.
 The histogram shows that there are many labels with very low frequency (strong class imbalance).
-For example 60 labels occur less than 100 times in the whole dataset.
-However, English occurs more than 20,000 times. We are dealing with this class imbalance in a later step.
-We merge the training and the test data into one dataframe for easier pre-processing and to ensure that training and test data comes from the same distribution
+For example 60 lanuages occur less than 100 times in the whole dataset while English occurs more than 20,000 times. We are dealing with this class imbalance in a later step.
+We merge the training and the test data into one dataframe for easier pre-processing and to ensure that training and test data comes from the same distribution.
 We saw that some languages/ labels do not appear in the training data while appearing in the test data and the other way around
-Since this is not desirable we merge training and test data into one dataset and before starting to train we randomly shuffle and split into train and test data again. This ensures that all labels appear in the training and test data.
+Since it is not required that we merge training and test data into one dataset and before starting to train, we randomly shuffle and split into train and test data again. This ensures that all labels appear in the training and test data.
 
 ## Pre-Processing
 
@@ -19,10 +18,10 @@ We decided to use a very similar preprocessing process similar to project number
 First of all we remove patterns like retwees, hyperlinks, emojis, xml, hashtags which do not help with the classification.
 Then we detect all languages with a small number of occurences (< 100). We use back translation and upsamling in order to increase the sample size to at least 100.
 The labels are then transformed into indices and the tweets are tokenized and vectorized and then padded to all have a unit length of 80.
-When then split the vectorized data into training and test data based on a 80:20 split. 10 percent of the training data is then used as validation data. 
+Next, we split the vectorized data into training and test data based on a 80:20 split. 10 percent of the training data is then used as validation data. 
 
 ## Part 1
-We decided to build the CNNs using keras. We tried out different values for the optimizer, learning rate, dropout, number of filters, stride, kernel size, different pooling strategies and batch sizes. Since we are not dropping any classes neither from the training nor the train set we see that our best classifier
+We decided to build the CNNs using keras. We tried out different combinations of optimizer, learning rate, dropout, number of filters, stride, kernel size, different pooling strategies and batch sizes. Since we are not dropping any classes from neither the training nor the train set we see that our best classifier
 performs very well on average (Weighted F1 score of 97%). However, if you consider the macro F1 score (which weights the F1 equally for every label) you can 
 see that the model performs not really well, because it only achieves a macro F1 of 50%. 
 An easy trick in order to increase the macro F1 score, would be to drop all the labels with small sample size from the training and test set.
