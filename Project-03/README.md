@@ -26,20 +26,20 @@ performs very well on average (Weighted F1 score of 97%). However, if you consid
 see that the model performs not really well, because it only achieves a macro F1 of 50%. 
 An easy trick in order to increase the macro F1 score, would be to drop all the labels with small sample size from the training and test set.
 
-|Model Nr.|Optimzer|Learning Rate|Dropout Rate|#Filters|Stride|Kernel Size|Pooling|Batch Size|Accuracy|Macro F1|Weighted F1|
-|-|-|-|-|-|-|-|-|-|-|-|-|
-|1.|sgd|0.1|0.5|128|1|3|GlobalMaxPooling1D|64|0.84|0.19|0.83|
-|2.|sgd|0.01|0.25|256|1|7|GlobalMaxPooling1D|128|0.89|0.15|0.88|
-|3.|adam|0.01|0.25|512|2|3|GlobalMaxPooling1D|64|0.88|0.15|0.89|
-|4.|adam|0.001|0.5|128|1|5|GlobalMaxPooling1D|64|0.95|0.5|0.94|
-|5.|adam|0.001|0.25|128|1|5|GlobalMaxPooling1D|128|0.97|0.5|0.97|
+|Model Nr.|Optimzer|Learning Rate|Dropout Rate|#Filters|Stride|Kernel Size|Batch Size|Accuracy|Macro F1|Weighted F1|
+|-|-|-|-|-|-|-|-|-|-|-|
+|1.|sgd|0.1|0.5|128|1|3|64|0.84|0.19|0.83|
+|2.|sgd|0.01|0.25|256|1|7|128|0.89|0.15|0.88|
+|3.|adam|0.01|0.25|512|2|3|64|0.88|0.15|0.89|
+|4.|adam|0.001|0.5|128|1|5|64|0.95|0.5|0.94|
+|5.|adam|0.001|0.25|128|1|5|128|0.97|0.5|0.97|
 
 ## Part 2
 Take the best performing model and evaluate it on the test set. We decided to evaluate model number 5 on the test data since it showed the best validation accuracy. The best models performance and the used hyperparameters can be seen in the following table.
 
-|Model Nr.|Optimzer|Learning Rate|Dropout Rate|#Filters|Stride|Kernel Size|Pooling|Batch Size|Accuracy|Macro F1|Weighted F1|
-|-|-|-|-|-|-|-|-|-|-|-|-|
-|5.|adam|0.001|0.2|128|1|5|GlobalMaxPooling1D|128|0.92|0.5|0.91|
+|Model Nr.|Optimzer|Learning Rate|Dropout Rate|#Filters|Stride|Kernel Size|Batch Size|Accuracy|Macro F1|Weighted F1|
+|-|-|-|-|-|-|-|-|-|-|-|
+|5.|adam|0.001|0.2|128|1|5|128|0.92|0.5|0.91|
 
 ## Part 3
 **Reasons about the observed effects of your 5 best hyperparameter settings on model performance.**
