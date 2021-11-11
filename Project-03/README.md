@@ -63,8 +63,6 @@ Take the best performing model and evaluate it on the test set. We decided to ev
 
 Multiple causes might be the reason while the models from assignment 01 perform better (especially the SGDClassifier) than the CNN we used now.
 First of all, we were allowed to optimize the hyperparameters on the training data for assignment 01.
-Furthermore, for assignment 03 we upsampled the underrepresented classes to a total occurence of 100.
-Therefore in the split we are using for training and testing more samples from a formerly underrepresented class occur.
-Since the model performs worse for samples from small classes, this reduces our macro f1 score.
-Overall the weighted average performance of the models is very comparable.
+Furthermore, for assignment 03 we upsampled the underrepresented classes to a total occurence of 100. Therefore in the split we are using for training and testing more samples from a formerly underrepresented class occur. However, 100 is still small compare to large classes English's 20,000. Since the model performs worse for samples from small classes, this reduces our macro f1 score.
+Overall, the weighted average performance of the models is still very comparable.
 
