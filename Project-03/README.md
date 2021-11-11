@@ -1,7 +1,5 @@
 # Exercise 3 - Language Identification with CNNs
 
-
-
 This project is about language identification using convolutional neural networks (CNNs).
 In a first step, the most important distributional properties of the dataset are inspected and plotted.
 The dataset contains a total of 65954 samples split into 52675 training samples and 13279 test samples.
@@ -41,6 +39,7 @@ Take the best performing model and evaluate it on the test set. We decided to ev
 |-|-|-|-|-|-|-|-|-|-|-|
 |5.|adam|0.001|0.2|128|1|5|128|0.92|0.5|0.91|
 
+\newpage
 ## Part 3
 **Reasons about the observed effects of your 5 best hyperparameter settings on model performance.**
 1. Optimizer => We saw that adam generally performed better on our training data leading to better results than sgd. The reason is probably that standard sgd with no momentum descends less efficiently and it is easier to get trapped in local miminmum while adam with adaptive descending speeding and momentum usually can have better optimization performance in gradient descent.
@@ -54,7 +53,8 @@ Take the best performing model and evaluate it on the test set. We decided to ev
 
 ## Part 4
 **Compare the outputs of the best CNN model to your best performing model from Exercise 1. Which classifier scores higher on the test set? Do you have an idea, why this might be?**
-|Model|Accuracy|Macro F1|Weighted F1|
+
+|Model|Accuracy|Macro-F1|Weighted-F1|
 |-|-|-|-|
 |SGDClassifier|0.93|0.93|0.93|
 |MultinomialNB|0.86|0.84|0.86|
