@@ -41,7 +41,7 @@ Take the best performing model and evaluate it on the test set. We decided to ev
 
 \newpage
 ## Part 3
-**Reasons about the observed effects of your 5 best hyperparameter settings on model performance.**
+**Reasons about the observed effects of your 5 best hyperparameter settings on model performance.**.  
 -1. Optimizer => We saw that adam generally performed better on our training data leading to better results than sgd. The reason is probably that standard sgd with no momentum descends less efficiently and it is easier to get trapped in local miminmum while adam with adaptive descending speeding and momentum usually can have better optimization performance in gradient descent.  
 -2. Learning rate => If the learning rate was to high (e.g 0.1, 0.01) we saw that the training process did not really converge. So we used low learning rate in our model 5. To prevent the loss function from not converging, we can also try learning rate decay in the future.  
 -3. Dropout => Very big values for the dropout rate (e.g 0.8) lead to very poor results. Since dropout is firstly intend to solve overfiting, as we set a over high dropout rate, the model became underfitting. After many tryouts, we found that the optimal dropout rate of our model seems to be located in between 0.25 and 0.5.  
