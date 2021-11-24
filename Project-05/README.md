@@ -32,9 +32,10 @@ This means that the model has to be fine tuned on a down stream task in order to
 |Model fine-tuned with 1000 sentences (and non-frozen embeddings)|0.9064|0.3462|
 |Model with 3000 sentences (and non-frozen embeddings)|0.9301|0.4655|
 |Model with 3000 sentences (and frozen embeddings)|0.9047|0.1903|
-We can see that the model being fine tuned using 3000 sentences with non frozen base model parameters achieves the best performance.
 
-**1.3 Are there differences between f1-micro and f1-macro score? If so, why?**. 
+=> We can see that the model being fine tuned using 3000 sentences with non frozen base model parameters achieves the best performance.
+
+**1.3 Are there differences between f1-micro and f1-macro score? If so, why?**.  
 There are big differences between micro and macro f1.
 The macro f1 metric is computed by independently computing the f1 score for each class/ label seperately and then taking the average 
 (In this case all classes are weighted equally).  
