@@ -1,1 +1,49 @@
-*Project 05*
+# Project 5 (Sequence and Sentiment Classification using Transformers)
+
+## Part 1 - Named Entity Recognition using BERT
+
+**1.1 When initializing the BertForTokenClassification-class with BERT-base you should get a warning message. Explain why you get this message.**
+```
+Some weights of the model checkpoint at bert-base-german-cased were not used when initializing BertForTokenClassification:  
+- This IS expected if you are initializing BertForTokenClassification from the checkpoint of a model  
+trained on another task or with another architecture  
+(e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).  
+- This IS NOT expected if you are initializing BertForTokenClassification from the checkpoint of a model that you expect to be exactly identical   
+(initializing a BertForSequenceClassification model from a BertForSequenceClassification model).  
+Some weights of BertForTokenClassification were not initialized from the model checkpoint at bert-base-german-cased and are newly initialized:  
+['classifier.bias', 'classifier.weight'].  
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.  
+```
+
+We added the received error message here in order to make clear what we are talking about.  
+This error message is received because the BERT model ‘bert-base-german-cased’  
+that we want to use for our BertForSequenceClassification model 
+has been pre-trained on another architecture (BertForPreTraining). 
+This means that the layers of our target architecture (BertForSequenceClassification), which are not present in our base
+architecture (BertForPreTraining) will be randomly initialized.
+This layers of our base model (BertForPreTraining), which are not part of our
+target architecture (BertForSequenceClassification) will be discarded.
+This means that the model has to be fine tuned on a down stream task in order to learn the proper weights in the randomly intialized layers.
+
+**1.2 Which model performed best on the evaluation set?**
+
+|Description|Approx Micro F1|Approx Macro F1| 
+|---|---|---|
+|Model fine-tuned with 1000 sentences (and non-frozen embeddings)|0.9064|0.3462|
+|Model with 3000 sentences (and non-frozen embeddings)|0.9301|0.4655|
+|Model with 3000 sentences (and frozen embeddings)|0.9047|0.1903|
+
+**1.3 Are there differences between f1-micro and f1-macro score? If so, why?** 
+There are big differences between micro and macro f1.
+
+**1.4 How large is the performance gap between 1’000 and 3’000 sentences for finetuning?**  
+There is a performance gap between a BERT model being fine tuned on 1000 and 3000 sentences 
+of ≈3\% micro F1 and ≈12\% macro F1.
+
+**1.5 Is it better to freeze or not to freeze the embeddings?**
+Since the performance of the model being trained on 3000 sentences with not frozen embeddings exceeds
+the performance of the reference model, it is better to not freeze the embeddings.
+
+
+
+## Part 2 - Resource Limited Competition: Sentiment Analysis
