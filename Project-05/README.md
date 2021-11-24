@@ -35,15 +35,19 @@ This means that the model has to be fine tuned on a down stream task in order to
 
 **1.3 Are there differences between f1-micro and f1-macro score? If so, why?** 
 There are big differences between micro and macro f1.
+The macro f1 metric is computed by independently computing the f1 score for each class/ label seperately and then taking the average 
+(In this case all classes are weighted equally).  
+The micro f1 is computed by weighting the f1 score of every class by the number of samples supporting this class  
+(In this case the weight of a class is poportional to its number of samples).
 
 **1.4 How large is the performance gap between 1’000 and 3’000 sentences for finetuning?**  
 There is a performance gap between a BERT model being fine tuned on 1000 and 3000 sentences 
-of ≈3\% micro F1 and ≈12\% macro F1.
+of ≈3\% micro F1 and ≈12\% macro F1. This performance difference is quite significant.
+Therefore more fine tuning sampels certainly improved the performance.
 
 **1.5 Is it better to freeze or not to freeze the embeddings?**
-Since the performance of the model being trained on 3000 sentences with not frozen embeddings exceeds
+Since the performance of the model being trained on 3000 sentences with non frozen embeddings exceeds
 the performance of the reference model, it is better to not freeze the embeddings.
-
-
+We dont know if this always holds true.
 
 ## Part 2 - Resource Limited Competition: Sentiment Analysis
