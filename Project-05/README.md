@@ -104,9 +104,9 @@ According to this paper, this model has improved the BERT in the following 4 asp
 (3) training on longer sequences; and
 (4) dynamically changing the masking pattern applied to the training data.
 They also collect a large new dataset (CC-NEWS) of comparable size to other privately used datasets, to better control for training set size effects.
-  
-  
-  
+&nbsp;  
+&nbsp;  
+&nbsp;  
 **Model 5:**  
 is called "siebert/sentiment-roberta-large-english". This model is a fine-tuned checkpoint of RoBERTa-large (Model 4). It enables reliable binary sentiment analysis for a larger range of types of English-language text. This model is already fine-tuned and has a high accuracy before training. However, since it is large and it is the fifth model. Our GPU is out of memory in the end.
 
