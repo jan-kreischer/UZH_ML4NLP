@@ -68,3 +68,46 @@ Therefore, for this task and base model it is better not to freeze the embedding
 However, this depends on the specific base model and scenario.
 
 ## Part 2 - Resource Limited Competition: Sentiment Analysis
+
+In Part 2, We are expected to submit a fine-tuned Transformer model for the IMDB Binary sentiment classification task. 
+
+**2.1 Please have a statement in your report as to why and what hypothesis led you to choose this architecture. Did your results support
+the hypothesis? Why/Why not?**
+
+We had chosen and experimented 5 different pretrained models. The reasons why we chose them are introduced below.The following tables showes their performances before fine-tuning.
+
+
+|--|--|--|--|
+|model_name	|accuracy	|f1_macro	|f1_micro|
+|distilbert-base-uncased-finetuned-sst-2-english|	0.8075|	0.806671|	0.8075|
+|echarlaix/bert-base-uncased-sst2-acc91.1-d37-hybrid|	0.7055|	0.686775|	0.7055|
+|gchhablani/bert-base-cased-finetuned-sst2|	0.8220|	0.821986|	0.8220|
+|roberta-base|	0.5000|	0.333333|	0.5000|
+|siebert/sentiment-roberta-large-english|	0.8880|	0.887986|	0.8880|
+
+Model 1, the "distilbert-base-uncased-finetuned-sst-2-english", is based on the DistilBERT base model, which is the distilled version of the BERT base model and is later fine-tunned by the Stanford Sentiment Treebank(SST). The Stanford Sentiment Treebank consists of sentences from movie reviews and human annotations of their sentiment. 
+According to this paper(https://arxiv.org/abs/1910.01108), comparied to the original BERT model, the distilled version pre-trains a smaller general-purpose language and is able to reduce the size of a BERT model by 40%. So we included it into our experiment.
+
+Model 2 is called "echarlaix/bert-base-uncased-sst2-acc91.1-d37-hybrid". We think this model is interesting because it had used a pruning method. Some attentions heads are removed. There are pros and cons regarding this methods. It can avoid over-fitting but indeeed lower the accuracy, which is proven in the later result.
+
+Model 3 is called "gchhablani/bert-base-cased-finetuned-sst2". This model is a fine-tuned version of bert-base-cased on the GLUE SST2 dataset. We included it because it had achieved a high accuracy rate of 0.92 in the sst dataset.
+
+Model 4, the "roberta-base", is introduced in this paper: https://arxiv.org/pdf/1907.11692.pdf. According to this paper, this model has improved the BERT in the following 4 aspects:
+(1) training the model longer, with bigger batches, over more data;
+(2) removing the next sentence prediction objective;
+(3) training on longer sequences; and
+(4) dynamically changing the masking pattern applied to the training data.
+They also collect a large new dataset (CC-NEWS) of comparable size to other privately used datasets, to better control for training set size effects.
+
+Model 5 is called "siebert/sentiment-roberta-large-english". This model is a fine-tuned checkpoint of RoBERTa-large (Model 4). It enables reliable binary sentiment analysis for a larger range of types of English-language text. This model is already fine-tuned and has a high accuracy before training. However, since it is large and it is the fifth model. Our GPU is out of memory in the end.
+
+After fine-tuning, the models' performance on the test data are so follows:
+|__|__|__|__|
+|model_name|	accuracy|	f1_macro|	f1_micro|
+|distilbert-base-uncased-finetuned-sst-2-english|	0.8385|	0.838466|	0.8385|
+|echarlaix/bert-base-uncased-sst2-acc91.1-d37-hybrid|	0.8425|	0.842398|	0.8425|
+|gchhablani/bert-base-cased-finetuned-sst2|	0.8555|	0.855461|	0.8555|
+|roberta-base|	0.8825|	0.882499|	0.8825|
+
+Besides the model 5, "siebert/sentiment-roberta-large-english", which is fine-tuned on a large dataset, we found that the prediction accuracy of Model 4, the "roberta-base", has increased the most and reached the highest(0.88). The reasons for this is that, comparied to the BERT model that model 1, 2 and 3 based on,  the RoBERTa is pre-trained longer and with bigger batches and more data and longer sequence. Although we can't tell their removing the next sentence prediction objective enhances the model, their using a dynamical masking pattern definitely helps.
+
