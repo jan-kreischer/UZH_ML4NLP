@@ -89,7 +89,7 @@ We had chosen and experimented 5 different pretrained models. The reasons why we
 Model 1, the "distilbert-base-uncased-finetuned-sst-2-english", is based on the DistilBERT base model, which is the distilled version of the BERT base model and is later fine-tunned by the Stanford Sentiment Treebank(SST). The Stanford Sentiment Treebank consists of sentences from movie reviews and human annotations of their sentiment. 
 According to this paper(https://arxiv.org/abs/1910.01108), comparied to the original BERT model, the distilled version pre-trains a smaller general-purpose language and is able to reduce the size of a BERT model by 40%. So we included it into our experiment.
 
-Model 2 is called "echarlaix/bert-base-uncased-sst2-acc91.1-d37-hybrid". We think this model is interesting because it had used a pruning method. Some attentions heads are removed. There are pros and cons regarding this methods. It can avoid over-fitting but indeeed lower the accuracy, which is proven in the later result.
+Model 2 is called "echarlaix/bert-base-uncased-sst2-acc91.1-d37-hybrid". We think this model is interesting because it used a pruning method. Some attentions heads are removed. There are pros and cons regarding this methods. It can avoid over-fitting but indeeed lower the accuracy, which is proven in the later result.
 
 Model 3 is called "gchhablani/bert-base-cased-finetuned-sst2". This model is a fine-tuned version of bert-base-cased on the GLUE SST2 dataset. We included it because it had achieved a high accuracy rate of 0.92 in the sst dataset.
 
