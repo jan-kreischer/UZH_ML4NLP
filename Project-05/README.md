@@ -50,7 +50,7 @@ a deviation in micro and macro f1 (Like we observerd).
 
 **1.4 How large is the performance gap between 1’000 and 3’000 sentences for finetuning?**.    
 There is a performance gap between a BERT model being fine tuned on 1000 and 3000 sentences 
-of ≈3\% micro F1 and ≈12\% macro F1. This performance difference is quite significant.
+of approx 3\% micro F1 and approx 12\% macro F1. This performance difference is quite significant.
 Therefore more fine tuning sampels certainly improved the performance.
 It would be interesting how far you can increase the models performance by increasing the
 amount of data used for fine tuning.
