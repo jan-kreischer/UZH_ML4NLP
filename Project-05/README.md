@@ -3,17 +3,17 @@
 ## Part 1 - Named Entity Recognition using BERT
 
 **1.1 When initializing the BertForTokenClassification-class with BERT-base you should get a warning message. Explain why you get this message.**
-```
-Some weights of the model checkpoint at bert-base-german-cased were not used when initializing BertForTokenClassification:  
-- This IS expected if you are initializing BertForTokenClassification from the checkpoint of a model  
-trained on another task or with another architecture  
-(e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).  
-- This IS NOT expected if you are initializing BertForTokenClassification from the checkpoint of a model that you expect to be exactly identical   
-(initializing a BertForSequenceClassification model from a BertForSequenceClassification model).  
-Some weights of BertForTokenClassification were not initialized from the model checkpoint at bert-base-german-cased and are newly initialized:  
-['classifier.bias', 'classifier.weight'].  
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.  
-```
+
+> *'Error: Some weights of the model checkpoint at bert-base-german-cased were not used when initializing BertForTokenClassification:  
+> This IS expected if you are initializing BertForTokenClassification from the checkpoint of a model  
+> trained on another task or with another architecture  
+> (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).  
+> This IS NOT expected if you are initializing BertForTokenClassification from the checkpoint of a model that you expect to be exactly identical   
+> (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).  
+> Some weights of BertForTokenClassification were not initialized from the model checkpoint at bert-base-german-cased and are newly initialized:  
+> ['classifier.bias', 'classifier.weight'].  
+> You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.'*  
+
 
 We added the received error message here in order to make clear what we are talking about.  
 This error message is received because the BERT model ‘bert-base-german-cased’  
