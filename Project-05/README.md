@@ -77,8 +77,9 @@ the hypothesis? Why/Why not?**
 We had chosen and experimented 5 different pretrained models. The reasons why we chose them are introduced below.The following tables showes their performances before fine-tuning.
 
 
-|--|--|--|--|
+
 |model_name	|accuracy	|f1_macro	|f1_micro|
+|--|--|--|--|
 |distilbert-base-uncased-finetuned-sst-2-english|	0.8075|	0.806671|	0.8075|
 |echarlaix/bert-base-uncased-sst2-acc91.1-d37-hybrid|	0.7055|	0.686775|	0.7055|
 |gchhablani/bert-base-cased-finetuned-sst2|	0.8220|	0.821986|	0.8220|
@@ -102,8 +103,9 @@ They also collect a large new dataset (CC-NEWS) of comparable size to other priv
 Model 5 is called "siebert/sentiment-roberta-large-english". This model is a fine-tuned checkpoint of RoBERTa-large (Model 4). It enables reliable binary sentiment analysis for a larger range of types of English-language text. This model is already fine-tuned and has a high accuracy before training. However, since it is large and it is the fifth model. Our GPU is out of memory in the end.
 
 After fine-tuning, the models' performance on the test data are so follows:
-|__|__|__|__|
+
 |model_name|	accuracy|	f1_macro|	f1_micro|
+|--|--|--|--|
 |distilbert-base-uncased-finetuned-sst-2-english|	0.8385|	0.838466|	0.8385|
 |echarlaix/bert-base-uncased-sst2-acc91.1-d37-hybrid|	0.8425|	0.842398|	0.8425|
 |gchhablani/bert-base-cased-finetuned-sst2|	0.8555|	0.855461|	0.8555|
