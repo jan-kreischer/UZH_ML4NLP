@@ -5,7 +5,7 @@
 **1.1 For each time-period assign a name to each generated topic based on the topic’s top words. List all topic names
 in your report.**  
 
-**Period 1: before 1990**
+### Period 1: before 1990
 
 |Nr|Keywords|Topic Name|
 |-|--------|--|
@@ -18,7 +18,7 @@ in your report.**
 |6|systems using parallel performance implementation decision distributed linear control digital design processing|Distributed Systems|
 |7|control networks new recognition distributed time pattern optimal systems approach digital linear|incoherent|. 
 
-**Period 2: from 1990 to 2009**
+### Period 2: from 1990 to 2009
 |Nr|Keywords|Topic|
 |-|-|-|
 |0|time algorithm linear new network models algorithms efficient high robust equations management|Algorithms|
@@ -30,7 +30,7 @@ in your report.**
 |6|adaptive application structure non theory knowledge scheme management robust linear control finite|Knowledge Management|
 |7|learning estimation applications order image distributed graphs web software power real development|incoherent|. 
 
-**Period 3: from 2009**
+### Period 3: from 2009
 |Nr|Keywords|Topic Name|
 |-|--------|--|
 |0|systems networks wireless performance novel evaluation sensing sensor communication linear distributed power|Wireless Networks|
@@ -52,7 +52,7 @@ In our opinion the given topics only somewhat make sense since they are not very
 **2.1  Assign a name to each topic based on the topic’s top words (for each time-period). List all topic names in
 your report.**
 
-**Period 1: before 1990**
+### Period 1: before 1990
 
 |Nr|Keywords|Topic Name|
 |-|--------|--|
@@ -66,7 +66,7 @@ your report.**
 |7|logic theory de languages theorem modal propositional semantics calculus set logics order symbolic grammars meeting association completeness first natural programs|Computational Linguistics|
 
 
-**Period 2: from 1990 to 2009**
+### Period 2: from 1990 to 2009**
 
 |Nr|Keywords|Topic Name|
 |-|--------|--|
@@ -79,7 +79,7 @@ your report.**
 |6|analysis data model fuzzy neural models molecular approach classification prediction network gene modeling mining genetic application selection protein decision structure|Neural Networks|
 |7|image images detection recognition segmentation using compression estimation brain speech imaging face magnetic radar reconstruction matching motion automatic sar signals|Computer Vision|
 
-**Period 3: from 2009**
+### Period 3: from 2009
 
 |Nr|Keywords|Topic Name|
 |-|--------|--|
