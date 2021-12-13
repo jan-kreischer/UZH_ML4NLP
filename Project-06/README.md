@@ -8,7 +8,7 @@ in your report.**
 **Period 1: before 1990**
 
 |Nr|Keywords|Topic Name|
-|-|------|--|
+|-|--------|--|
 |0|theory problems algorithms simulation decision parallel application solution applications optimal digital control|incoherent|
 |1|computer logic model programs digital performance design networks using applications systems simulation|incoherent|
 |2|problem programming optimal language digital processing software research solution parallel linear control|Parallel Programming|
@@ -20,7 +20,7 @@ in your report.**
 
 **Period 2: from 1990 to 2009**
 |Nr|Keywords|Topic Name|
-|-|------|--|
+|-|--------|--|
 |0|time algorithm linear new network models algorithms efficient high robust equations management|Algorithms|
 |1|method study problems evaluation case space programming equations finite linear new performance|incoherent|
 |2|design approach nonlinear optimal fuzzy modeling computing robust control equations new time|incoherent|
@@ -32,7 +32,7 @@ in your report.**
 
 **Period 3: from 2009**
 |Nr|Keywords|Topic Name|
-|-|------|--|
+|-|--------|--|
 |0|systems networks wireless performance novel evaluation sensing sensor communication linear distributed power|Wireless Networks|
 |1|based detection design linear mobile recognition prediction computing images cloud feature method|Image Recognition|
 |2|data method network optimization application applications modeling equations methods hybrid cloud problems|Cloud|
@@ -55,7 +55,7 @@ your report.**
 **Period 1: before 1990**
 
 |Nr|Keywords|Topic Name|
-|-|------|--|
+|-|--------|--|
 |0|computer review introduction research software network new simulation graphics computers technology artificial book science report intelligence operations architecture communication local|Computer Network|
 |1|note problem problems technical programming solution editor letter optimal scheduling networks solving times dynamic queues linear queue decision allocation integer|Programming|
 |2|system data design information distributed processing language database management expert structures chemical retrieval development interactive base systems online knowledge structure|Database System|
@@ -69,7 +69,7 @@ your report.**
 **Period 2: from 1990 to 2009**
 
 |Nr|Keywords|Topic Name|
-|-|------|--|
+|-|--------|--|
 |0|problems problem equations solution finite solutions numerical equation methods method solving order differential approximation generalized boundary functions convergence difference value|Programming|
 |1|theoretic rates spatially serial arrival modes simplified utilizing membership window composite cross underwater stage equivalent absolute replacement variations various transient|Memory Management|
 |2|information development case web knowledge study technology management research electronic system support collaborative paper software health business framework process online|Internet technology|
@@ -82,7 +82,7 @@ your report.**
 **Period 3: from 2009**
 
 |Nr|Keywords|Topic Name|
-|-|------|--|
+|-|--------|--|
 |0|adjustment selforganizing window nested simplified weighting train progressive optimum cross partition overlapping fractal impulse employing pairwise multi redundancy polar transformer|Machine Learning|
 |1|analysis surface data imaging land models temperature using water estimation series forest satellite mapping modeling soil radar comparison field cover|Big Data|
 |2|optimization fuzzy algorithm multiobjective problem decision swarm approach genetic evolutionary model hybrid particle new problems selection search programming set algorithms|Optimization|
