@@ -19,8 +19,8 @@ in your report.**
 |7|control networks new recognition distributed time pattern optimal systems approach digital linear|incoherent|. 
 
 **Period 2: from 1990 to 2009**
-|Nr|Keywords|Topic Name|
-|-|--------|--|
+|Nr|Keywords|Topic|
+|-|-|-|
 |0|time algorithm linear new network models algorithms efficient high robust equations management|Algorithms|
 |1|method study problems evaluation case space programming equations finite linear new performance|incoherent|
 |2|design approach nonlinear optimal fuzzy modeling computing robust control equations new time|incoherent|
