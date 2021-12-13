@@ -16,8 +16,7 @@ in your report.**
 |4|note information linear functions applications finite technical programming systems time problem decision|Linear Programming|
 |5|algorithm design analysis approach sets performance new using implementation parallel linear digital|Algorithm Design|
 |6|systems using parallel performance implementation decision distributed linear control digital design processing|Distributed Systems|
-|7|control networks new recognition distributed time pattern optimal systems approach digital linear|incoherent|  
-
+|7|control networks new recognition distributed time pattern optimal systems approach digital linear|incoherent|. 
 
 **Period 2: from 1990 to 2009**
 |Nr|Keywords|Topic Name|
@@ -29,8 +28,7 @@ in your report.**
 |4|using analysis networks performance problem multi dynamic neural wireless mobile recognition network|Mobile Computing|
 |5|systems data information multiple digital linear robust management time control nonlinear analysis|Information Management|
 |6|adaptive application structure non theory knowledge scheme management robust linear control finite|Knowledge Management|
-|7|learning estimation applications order image distributed graphs web software power real development|incoherent|
-
+|7|learning estimation applications order image distributed graphs web software power real development|incoherent|. 
 
 **Period 3: from 2009**
 |Nr|Keywords|Topic Name|
@@ -42,7 +40,7 @@ in your report.**
 |4|control model estimation robust sensor selection tracking systems linear nonlinear stochastic distributed|Distributed sensors|
 |5|learning neural efficient optimal distributed scheme problem multiple problems stochastic machine deep|Machine Learning|
 |6|approach algorithm study new time algorithms online tracking case improved research optimization|Optimization|
-|7|using analysis image dynamic power classification fuzzy communication machine feature learning selection|Classification|
+|7|using analysis image dynamic power classification fuzzy communication machine feature learning selection|Classification|. 
 
 **1.2 Do the topics make sense to you? Are they coherent? Do you observe trends? Discuss in 4-6 sentences**  
 In our opinion the given topics only somewhat make sense since they are not very coherent. Therefore, between different topics there is always a certain overlap and various keywords appear in multiple topics at a time (e.g. digital, parallel, linear). This overlap between the sets of keywoards makes the topics more ambigous and blur the lines between topics. Therefore, it is often very hard to find a suitable name for a topic. Often a set of keywoards had to be labeled as **incoherent**.
