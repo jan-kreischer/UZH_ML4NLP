@@ -18,6 +18,7 @@ in your report.**
 |6|systems using parallel performance implementation decision distributed linear control digital design processing|Distributed Systems|
 |7|control networks new recognition distributed time pattern optimal systems approach digital linear|incoherent|  
 
+
 **Period 2: from 1990 to 2009**
 |Nr|Keywords|Topic Name|
 |-|--------|--|
@@ -29,6 +30,7 @@ in your report.**
 |5|systems data information multiple digital linear robust management time control nonlinear analysis|Information Management|
 |6|adaptive application structure non theory knowledge scheme management robust linear control finite|Knowledge Management|
 |7|learning estimation applications order image distributed graphs web software power real development|incoherent|
+
 
 **Period 3: from 2009**
 |Nr|Keywords|Topic Name|
