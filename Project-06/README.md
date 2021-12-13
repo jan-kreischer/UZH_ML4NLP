@@ -29,6 +29,7 @@ in your report.**
 |5|special issue introduction computer editorial de logic intelligence book language||
 |6|analysis data model fuzzy neural models molecular approach classification prediction||
 |7|image images detection recognition segmentation using compression estimation brain speech||
+
 **Period 3: from 2009**
 |Topic Num|keywords|Assigned Topics|
 |--|--|--|
