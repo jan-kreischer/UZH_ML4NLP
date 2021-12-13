@@ -3,34 +3,67 @@
 ## Part 1 - Topic Modelling using LDA
 
 **1.1 For each time-period assign a name to each generated topic based on the topic’s top words. List all topic names
-in your report. **
+in your report.**
 
+**Period 1: before 1990 **
+
+**Period 2: from 1990 to 2009**
+
+**Period 1: from 2009**
 
 **1.2 Do the topics make sense to you? Are they coherent? Do you observe trends? Discuss in 4-6 sentences**
 
-|Description|Approx Micro F1|Approx Macro F1| 
-|---|---|---|
-|Model fine-tuned with 1000 sentences (and non-frozen embeddings)|0.9064|0.3462|
-|Model with 3000 sentences (and non-frozen embeddings)|0.9301|0.4655|
-|Model with 3000 sentences (and frozen embeddings)|0.9047|0.1903|
+
 
 => We can see that the model being fine tuned using 3000 sentences with non frozen base model parameters achieves the best performance.
 
 
 ## Part 2 - Resource Limited Competition: Sentiment Analysis
 
-In Part 2, we are expected to submit a fine-tuned Transformer model for the IMDB Binary sentiment classification task. 
 
 **2.1  Assign a name to each topic based on the topic’s top words (for each time-period). List all topic names in
 your report.**
 
-|model_name	|accuracy	|f1_macro	|f1_micro|
-|--|--|--|--|
-|distilbert-base-uncased-finetuned-sst-2-english|	0.8075|	0.806671|	0.8075|
-|echarlaix/bert-base-uncased-sst2-acc91.1-d37-hybrid|	0.7055|	0.686775|	0.7055|
-|gchhablani/bert-base-cased-finetuned-sst2|	0.8220|	0.821986|	0.8220|
-|roberta-base|	0.5000|	0.333333|	0.5000|
-|siebert/sentiment-roberta-large-english|	0.8880|	0.887986|	0.8880|
+**Period 1: before 1990 **
+
+|Topic Num|keywords|Assigned Topics|
+|--|--|--|
+|0|computer review introduction research software network new simulation graphics computers technology artificial book science report intelligence operations architecture communication local||
+|1|note problem problems technical programming solution editor letter optimal scheduling networks solving times dynamic queues linear queue decision allocation integer||
+|2|system data design information distributed processing language database management expert structures chemical retrieval development interactive base systems online knowledge structure||
+|3|||
+|4|||
+|5|||
+|6|||
+|7|||
+
+
+**Period 2: from 1990 to 2009**
+
+|Topic Num|keywords|Assigned Topics|
+|--|--|--|
+|0|||
+|1|||
+|2|||
+|3|||
+|4|||
+|5|||
+|6|||
+|7|||
+
+**Period 1: from 2009**
+
+|Topic Num|keywords|Assigned Topics|
+|--|--|--|
+|0|||
+|1|||
+|2|||
+|3|||
+|4|||
+|5|||
+|6|||
+|7|||
+
 
 **2.2 Bianchi et al. 2021 claim that their approach produces more coherent topics than previous methods. Let’s test
 this claim by comparing the coherence of the topics produced by CTM with the topics produced by LDA. Describe
