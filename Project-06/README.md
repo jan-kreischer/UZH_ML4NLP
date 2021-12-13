@@ -42,7 +42,7 @@ in your report.**
 |6|approach algorithm study new time algorithms online tracking case improved research optimization|Optimization|
 |7|using analysis image dynamic power classification fuzzy communication machine feature learning selection|Classification|
 
-**1.2 Do the topics make sense to you? Are they coherent? Do you observe trends? Discuss in 4-6 sentences**
+**1.2 Do the topics make sense to you? Are they coherent? Do you observe trends? Discuss in 4-6 sentences**  
 In our opinion the given topics only somewhat make sense since they are not very coherent. Therefore, between different topics there is always a certain overlap and various keywords appear in multiple topics at a time (e.g. digital, parallel, linear). This overlap between the sets of keywoards makes the topics more ambigous and blur the lines between topics. Therefore, it is often very hard to find a suitable name for a topic. Often a set of keywoards had to be labeled as **incoherent**.
 
 
